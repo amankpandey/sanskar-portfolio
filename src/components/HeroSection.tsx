@@ -31,7 +31,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-background rounded-full blur-3xl -z-10"></div>
             <div className="overflow-hidden rounded-full border-4 border-primary/20 shadow-xl max-w-xs">
               <img 
-                src="/public/profile.jpg" 
+                src="/uploads/profile.png" 
                 alt="Sanskar Gupta" 
                 className="w-full h-full object-cover"
               />
