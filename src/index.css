@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 30% 98%;
+    --foreground: 280 10% 10%;
+
+    --card: 280 30% 98%;
+    --card-foreground: 280 10% 10%;
+
+    --popover: 280 30% 98%;
+    --popover-foreground: 280 10% 10%;
+
+    --primary: 280 60% 50%;
+    --primary-foreground: 280 10% 98%;
+
+    --secondary: 280 15% 90%;
+    --secondary-foreground: 280 10% 10%;
+
+    --muted: 280 15% 90%;
+    --muted-foreground: 280 5% 40%;
+
+    --accent: 280 15% 90%;
+    --accent-foreground: 280 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 15% 90%;
+    --input: 280 15% 90%;
+    --ring: 280 60% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 280 10% 10%;
+    --foreground: 280 10% 98%;
+
+    --card: 280 10% 10%;
+    --card-foreground: 280 10% 98%;
+
+    --popover: 280 10% 10%;
+    --popover-foreground: 280 10% 98%;
+
+    --primary: 280 60% 55%;
+    --primary-foreground: 280 10% 10%;
+
+    --secondary: 280 10% 20%;
+    --secondary-foreground: 280 10% 98%;
+
+    --muted: 280 10% 20%;
+    --muted-foreground: 280 5% 70%;
+
+    --accent: 280 10% 20%;
+    --accent-foreground: 280 10% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 10% 20%;
+    --input: 280 10% 20%;
+    --ring: 280 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl font-bold mb-6 inline-block relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-1 after:bg-primary after:rounded-full text-foreground;
+  }
+
+  .skill-tag {
+    @apply py-1.5 px-4 bg-secondary text-foreground rounded-full text-sm font-medium transition-all hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .project-card {
+    @apply bg-card rounded-lg p-6 border shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary));
+}
